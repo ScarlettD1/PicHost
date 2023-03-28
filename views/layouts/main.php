@@ -38,7 +38,10 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
-        'items' => []
+        'items' => [
+            ['label' => 'Upload', 'url' => ['/file/upload']],
+            ['label' => 'List', 'url' => ['/file/index']],
+        ]
     ]);
     NavBar::end();
     ?>

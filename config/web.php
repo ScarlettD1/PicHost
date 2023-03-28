@@ -57,9 +57,6 @@ $config = [
         'api' => [
             'class' => 'app\controllers\ApiController',
         ],
-        'upload' => [
-            'class' => 'app\controllers\FileController'
-        ]
     ],
     'params' => $params,
 ];

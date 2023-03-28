@@ -2,3 +2,5 @@ RewriteEngine on
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule . index.php [L]
+RewriteRule ^uploads/(.*)$ /web/uploads/$1 [L,R=301]
+
