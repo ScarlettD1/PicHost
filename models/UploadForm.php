@@ -33,11 +33,11 @@ class UploadForm extends Model
                 while (file_exists($filePath)){
                     $counter++;
                     $fileName = $fileName . 'uniq' . $counter;
-                    $filePath = 'uploads/' . $fileName . '.' .$file->extension;
+                    $filePath = 'uploads/' . $fileName . '.' . $file->extension;
                 }
                 $file->saveAs($filePath);
                 $model = new Image();
-                $model->filename = $fileName;
+                $model->filename = $fileName . '.' . $file->extension;
                 $model->created_at = date('Y-m-d H:i:s');
                 $model->save();
             }
